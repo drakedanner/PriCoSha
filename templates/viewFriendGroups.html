@@ -1,0 +1,13 @@
+<html>
+<h1> Friend Groups You Own </h1>
+
+{% for group in owned %}
+    <p>{{group}}<p>
+{% endfor %}
+
+<h1> Friend Groups You're In </h1>
+{% for group in included %}
+    <p>{{group}}<p>
+{% endfor %}
+
+</html>

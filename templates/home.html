@@ -1,0 +1,60 @@
+<html>
+<h1>Welcome {{username}}</h1>
+<!---
+<form action="/addContent" method="POST">
+
+	<input type="text" name = "blog" placeholder="post" required/> </br>
+	<input type="submit" value = Post />
+</form>
+	--->
+<body>
+
+<form action ="/addContent" method = "POST">
+<h3> Create a new post! </h3>
+<input type = "submit" value = NewPost />
+</form>
+
+<form action ="/createGroup" method="POST">
+	<h3> Friend Groups </h3>
+	<input type = "submit" value = Create />
+</form>
+
+<form action ="/viewGroups" method = "POST">
+	<input type = "submit" value = View your friend groups />
+</form>
+
+<form action = "/addFriend" method ="POST">
+	<h3> Add a friend to a friend group </h3>
+	<input type = "submit" value = Add Friend />
+</form>
+
+
+<style type="text/css">
+	table, th, td{
+		border: 1px solid black;
+	}
+</style>
+
+
+<h2> Your Posts </h2>
+<table>
+	<th>Name</th>
+	<th>File_path</th>
+	<th>timest</th>
+
+{% for line in myPosts %}
+	<tr>
+		<td>{{line.content_name}}</td>
+		<td>{{line.file_path}}</td>
+		<td>{{line.timest}}</td>
+	</tr>
+{% endfor %}
+</table>
+
+<a href="/logout">Logout</a>
+
+</body>
+
+
+
+</html>

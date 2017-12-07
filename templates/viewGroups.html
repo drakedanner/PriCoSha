@@ -1,0 +1,15 @@
+<html>
+<p> hey loser: add in view for who is in each group </p>
+<h1> Friend Groups You Own </h1>
+
+
+{% for group in owned %}
+    <p>{{group.group_name}}<p>
+{% endfor %}
+
+<h1> Friend Groups You're In </h1>
+{% for group in included %}
+    <p>{{group.group_name}}<p>
+{% endfor %}
+
+</html>
